@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  authentication:
+    command: python index.py
+    ports: 
+      - ${app_port}
+    volumes:
+      - ${app_dir}
+
+networks:
+  default:
+    external:
+      name: development_environment
